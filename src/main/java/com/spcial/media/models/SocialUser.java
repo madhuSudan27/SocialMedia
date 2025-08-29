@@ -2,6 +2,9 @@ package com.spcial.media.models;
 
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity
 public class SocialUser {
 
@@ -12,5 +15,9 @@ public class SocialUser {
 
     @OneToOne(mappedBy = "user")
     private SocialProfile profile;
+
+    @OneToMany
+    @JoinColumn(name = "sicial_user_id")
+    private List<Post> posts = new ArrayList<>();
 
 }
