@@ -9,4 +9,9 @@ public class Post {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+
+    @ManyToOne
+    @JoinColumn(name = "sicial_user_id")
+    private SocialUser user;
+
 }

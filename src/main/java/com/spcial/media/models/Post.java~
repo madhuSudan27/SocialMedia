@@ -1,2 +1,17 @@
-package com.spcial.media.models;public class Post {
+package com.spcial.media.models;
+
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "posts")
+public class Post {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    
+
+    @ManyToOne
+    @JoinColumn(name = "sicial_user_id")
+    private SocialUser user;
+
 }
