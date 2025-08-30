@@ -1,0 +1,4 @@
+package com.spcial.media.repository;
+
+public interface PostRepository {
+}
